@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Buttons Interface</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .button-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-3">
+        <div class="text-center">
+            <a href='/choose_date'><button type="button" class="btn btn-info">Получить данные по дате</button></a>
+        </div>
+
+        <div class="button-section d-flex justify-content-between">
+            {# <button type="button" class="btn btn-primary">Левая кнопка</button> #}
+            {# <button type="button" class="btn btn-success">Правая кнопка</button> #}
+        </div>
+
+        <div class="button-section d-flex justify-content-around">
+            {# <button type="button" class="btn btn-warning">Кнопка слева</button> #}
+            <a href='/all_days'><button type="button" class="btn btn-danger">Посмотреть все возможные даты</button></a>
+        </div>
+
+        <div class="button-section d-flex justify-content-end">
+            {# <button type="button" class="btn btn-secondary">Кнопка в конце</button> #}
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

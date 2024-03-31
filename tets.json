@@ -1,0 +1,23 @@
+{
+	"date": {
+		"data": 1674594000,
+		"description": "Татьянин день"
+	},
+	"rooms_count": {
+		"data": 3,
+		"description": "Количество комнат на этаже"
+	},
+	"windows_for_room": {
+		"data": [3, 2, 1],
+		"description": "Количество окон в каждой из комнат на этаже слева направо"
+	},
+	"windows": {
+		"data": {
+			"floor_1": [false, true, false, true, false, false],
+			"floor_2": [true, false, true, false, false, true],
+			"floor_3": [false, false, true, false, true, false],
+			"floor_4": [false, false, false, true, false, true]
+		},
+		"description": "Окна по этажам, в которых горит свет"
+	}
+}

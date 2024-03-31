@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Простая Таблица</title>
+<!-- Подключение CSS Bootstrap через CDN -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>{{date}}</h2>
+  <table class="table">
+    <thead class="thead-dark">
+        
+        {%for row in window_list[::-1]%}
+            <tr>
+                {%for col in row%}
+                    <td class={%if col in num_true_rooms%}'bg-success' {%else%}'bg-light'{%endif%}>
+                        {{col}}
+                    </td>
+                {%endfor%}
+            </tr>
+        {%endfor%}
+      
+    </tbody>
+  </table>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="block">
+        <h1 class="display-3">Входные данные</h1>
+        <p class="lead"><b>Количество комнат на этаже</b> = {{rooms_count}}</p>
+        <p class="lead"><b>Окна на этаже</b> = {{''.join(windows)}}</p>
+
+        <h1 class="display-3">Ответ</h1>
+        <p class="lead"><b>Количество комнат</b> = {{true_rooms_count}}</p>
+        <p class="lead"><b>Номера комнат</b> = {{', '.join(true_rooms)}}</p>
+  </div>
+</div>
+
+<!-- Подключение JS Bootstrap через CDN -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
